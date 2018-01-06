@@ -1,0 +1,41 @@
+<header id="header">
+        <div class="container">
+          <div class="header-logo pull-left">
+            <a title="{Stl.SiteName}" class="logo-url" href="{Stl.SiteUrl}/index.html">{stl:value type=Logo}</a>
+          </div>
+          <div class="header-menu pull-right">
+            <ul id="menu-nav" class="header-menu-con">
+            <stl:if type="ChannelIndex" operate="Equals" value="首页">
+                <stl:yes>
+                	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="{Stl.SiteUrl}/index.html">首页</a></li>
+                </stl:yes>
+                <stl:no>
+                	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="{Stl.SiteUrl}/index.html">首页</a></li>
+                </stl:no>
+            </stl:if>
+              
+              <stl:channels topLevel="0" groupChannel="nav">
+              <stl:if testType="UpChannelOrSelf">
+              <stl:yes>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-item current_page_item"><stl:a>{Channel.Title}</stl:a>
+                    <ul  class="sub-menu">
+                    <stl:channels>
+                    	<li class="menu-item menu-item-type-post_type menu-item-object-page"><stl:a>{Channel.Title}</stl:a></li>
+                    </stl:channels>
+                    </ul>
+                  </li>
+              </stl:yes>
+              <stl:no>
+              	  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><stl:a>{Channel.Title}</stl:a>
+                    <ul  class="sub-menu">
+                    <stl:channels>
+                    	<li class="menu-item menu-item-type-post_type menu-item-object-page"><stl:a>{Channel.Title}</stl:a></li>
+                    </stl:channels>
+                    </ul>
+                  </li>
+              </stl:no>
+              </stl:if>
+              </stl:channels>
+            </ul></div>
+        </div>
+      </header>

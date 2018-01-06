@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="doc">
+  <stl:include file="/include/head.html"></stl:include>
+  <body class="post-template-default single single-post postid-17 single-format-standard">
+    <stl:include file="/include/header.html"></stl:include>
+    <div class="container-fluid mini"></div>
+    <stl:include file="/include/banner.html"></stl:include><Section id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-9 col-xs-12 content">
+          <nav  class="crumbs">当前位置: <stl:location> > </stl:location></nav>
+          <article id="post-17" class="post-17 post type-post status-publish format-standard hentry category-news">
+            <div class="single-header">
+              <h1>{Content.Title}</h1>
+              <div class="single-meta">
+                <span class="time">时间：<stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span>
+                <span class="author hidden-xs">作者：{Content.AddUserName}</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <stl:content type="Content"></stl:content> 
+            </div>
+          </article>
+          <nav id="nav-single" class="clearfix">
+            <div class="nav-previous"><p><stl:navigation type="PreviousContent" tiptext="上一篇：" emptyText="无"></stl:navigation> </p></div>
+            <div class="nav-next"><p><stl:navigation type="NextContent" tiptext="下一篇：" emptyText="无"></stl:navigation></p></div>
+          </nav>
+        </div>
+        <stl:include file="/include/right.html"></stl:include>
+      </div>
+    </div>
+    </section>
+    <stl:include file="/include/footer.html"></stl:include>
+    <stl:include file="/include/js.html"></stl:include>
+  </body>
+</html>

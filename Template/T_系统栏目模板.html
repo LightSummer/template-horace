@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="doc">
+  <stl:include file="/include/head.html"></stl:include>
+  <body class="archive category category-news category-1">
+    <stl:include file="/include/header.html"></stl:include>
+    <div class="container-fluid mini"></div>
+    <stl:include file="/include/banner.html"></stl:include>
+    <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-9 col-xs-12 content-list">
+            <nav  class="crumbs">当前位置: <stl:location> > </stl:location></nav>
+            <stl:pageContents pageNum="8" isImage="true" order="AddDate">
+              <article class="post-27 post type-post status-publish format-standard hentry category-news">
+                <div class="row">
+                  <figure class="entry-img col-md-4 col-sm-4 col-xs-6"> 
+                    <stl:a title="{Content.Title}">
+                      <img  src="{Content.ImageUrl}" alt="{Content.Title}" />
+                    </stl:a>
+                  </figure>
+                  <div class="entry-content col-md-8 col-sm-8 col-xs-6">
+                    <h2 class="entry-title"><stl:a><stl:content type="Title" wordNum="24" ellipsis="..."></stl:content></stl:a></h2>
+                    <div class="entry-des hidden-xs">
+                      <p><stl:content type="Summary" wordNum="43" ellipsis="..."></stl:content></p>
+                    </div>
+                    <div class="entry-meta">
+                      <div class="time fl hidden-xs"><i class="fa fa-calendar-check-o"></i> <a href="javascript:void(0);"><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </stl:pageContents>
+            <div class="page-nav">
+              <stl:pageItem type="PreviousPage">
+                <stl:yes>
+                  <a class="prev page-numbers" href="{Current.Url}">« 上一页</a>
+                </stl:yes>
+                <stl:no>
+                  <a class="prev page-numbers" href="javascript:;">« 上一页</a>
+                </stl:no>
+              </stl:pageItem>
+              <stl:pageItem type="PageNavigation" listNum="5">
+                <stl:yes>
+                  <a class='page-numbers' href='{Current.Url}'>{Current.Num}</a>
+                </stl:yes>
+                <stl:no>
+                  <span class='page-numbers current'>{Current.Num}</span>
+                </stl:no>
+              </stl:pageItem>
+              <stl:pageItem type="NextPage">
+                <stl:yes>
+                  <a class="next page-numbers" href="{Current.Url}">下一页 &raquo;</a>
+                </stl:yes>
+                <stl:no>
+                  <a class="next page-numbers" href="javascript:;">下一页 &raquo;</a>
+                </stl:no>
+              </stl:pageItem>
+            </div></div>
+          <stl:include file="/include/right.html"></stl:include>
+        </div>
+      </div>
+    </section>
+    <stl:include file="/include/footer.html"></stl:include>
+    <stl:include file="/include/js.html"></stl:include>
+  </body>
+</html>

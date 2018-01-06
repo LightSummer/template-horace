@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html id="doc">
+  <stl:include file="/include/head.html"></stl:include>
+  <body class="home blog">
+    <div class="wrapper">
+      <stl:include file="/include/header.html"></stl:include>
+      <div class="container-fluid mini"></div>
+      <section id="slider" class="container-full">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+          <stl:contents channelIndex="Banner" totalNum="3">
+            <div class="swiper-slide">
+              <a href="javascript:;" title="{Content.Title}">
+                <img src="{Content.ImageUrl}" alt="{Content.Title}">
+              </a>
+            </div>
+          </stl:contents>
+          </div>
+          <div class="swiper-pagination big-p1"></div>
+          <div class="icon-arrows-left icon"></div>
+          <div class="icon-arrows-right icon"></div>
+        </div></section>
+      <Section id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-6">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="idx-about" role="tab" data-toggle="tab">公司介绍</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="idx-about">
+                  <div class="media">
+                  <stl:contents channelIndex="公司介绍" totalNum="1">
+                    <p><img class="alignleft size-full wp-image-28" src="{Content.ImageUrl}" alt="{Content.Title}" width="117" height="117" /></p>
+                    <p><stl:content type="Summary" wordNum="87" ellipsis="..."></stl:content></p>
+                  </stl:contents>
+                  </div>
+                </div>
+              </div>
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#idxcontact" aria-controls="idxcontact" role="tab" data-toggle="tab" aria-expanded="false">联系我们</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active text-muted" id="idxcontact">
+                  <h3>{stl:value type=cor}</h3>
+                  <ul>
+                    <li>地址：{stl:value type=Address}</li>
+                    <li>总机：{stl:value type=Iphone}</li>
+                    <li>电邮：{stl:value type=Email}</li>
+                  </ul>
+                </div>
+              </div>     
+            </div>
+            <div class="col-md-5 col-xs-12 col-sm-6">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#idxnews" aria-controls="idxNews" role="tab" data-toggle="tab" aria-expanded="true">新闻动态</a></li>
+                <li role="presentation" class=""><a href="#idxnotice" aria-controls="idxNotice" role="tab" data-toggle="tab" aria-expanded="false">通知公告</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="idxnews">
+                  <ul>
+                  <stl:contents channelIndex="公司动态" totalNum="10" order="AddDate">
+                    <li> <stl:a target="_blank"  title="{Content.Title}"><em></em>
+                      <stl:content type="Title" wordNum="22" ellipsis="..."></stl:content><span><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span></stl:a> 
+                    </li>
+                  </stl:contents>
+                    
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="idxnotice">
+                  <ul>
+                   <stl:contents channelIndex="通知公告" totalNum="10" order="AddDate">
+                    <li> <stl:a target="_blank"  title="{Content.Title}"><em></em>
+                      <stl:content type="Title" wordNum="22" ellipsis="..."></stl:content><span><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span></stl:a> 
+                    </li>
+                  </stl:contents>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm"> 
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="idx-about" role="tab" data-toggle="tab">公司相册</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="idx-images">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <stl:contents channelIndex="公司相册" totalNum="5" isImage="true">
+                      <div class="swiper-slide">
+                        
+                        <a href="javascript:;" title="{Content.Title}">
+                          <img  src="{Content.ImageUrl}" alt="{Content.Title}" />
+                        </a> 
+                        <div class="shadow"></div>
+                        <p><a href="javascript:;" class="banner-title"  title="{Content.Title}"><stl:content type="Title"></stl:content></a></p>    
+                      </div> 
+                    </stl:contents>           
+                    </div>
+                    <div class="swiper-pagination big-p1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+            <stl:include file="/include/footer.html"></stl:include>
+            <stl:include file="/include/js.html"></stl:include>
+          </body>
+          </html>
+            
